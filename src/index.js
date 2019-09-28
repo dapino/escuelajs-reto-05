@@ -1,6 +1,7 @@
 const $app = document.getElementById('app');
 const $observe = document.getElementById('observe');
-const API = 'https://rickandmortyapi.com/api/character/';
+const API2 = 'https://rickandmortyapi.com/api/character/';
+const API = 'http://us-central1-escuelajs-api.cloudfunctions.net/characters';
 
 const getData = api => {
     const next_fetch = localStorage.getItem('next_fetch');
@@ -10,7 +11,7 @@ const getData = api => {
         console.log('next_fetch?, no, doesnt exist that.' )
     } else {
       console.log('Yes!, next_fetch exist!')
-      console.log(next_fetch)
+      API_URL = next_fetch
     }
 
     fetch(API_URL)
